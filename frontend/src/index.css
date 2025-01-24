@@ -80,7 +80,7 @@ img{
   }
 
   .box{
-    margin: 0 auto !important;
+    margin: 20px auto !important;
   }
   
 }
@@ -106,7 +106,7 @@ img{
   display: grid;
   grid-template-columns: auto auto  auto;
   place-items: center;
-  margin: 20px 20px;
+  margin: 0 20px;
   height: auto;
 justify-content: start;
 
