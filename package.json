@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "rettiwt-api": "^4.1.4",
+    "type": "module"
+  }
+  
+}
