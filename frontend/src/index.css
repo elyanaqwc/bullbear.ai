@@ -24,7 +24,7 @@ html, body {
 display: flex;
 justify-content: start;
 align-items: center;
-padding: 20px 20px;
+padding: 20px 30px;
 position: sticky;
 top: 0;
 background-color: white;
@@ -76,7 +76,7 @@ img{
   .navbar .logo img {
     width: 60px;
     height: 60px;
-    padding-right: 50px;
+    padding-right: 60px;
   }
 
   .box{
@@ -109,7 +109,7 @@ img{
   place-items: center;
   margin: 0 20px;
   height: auto;
-justify-content: start;
+justify-content: center;
 
 }
 
