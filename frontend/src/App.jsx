@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Logo from './assets/bullbear.png';
 import { fetchTweets } from './api'; 
 import './index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +21,7 @@ const NavBar = (({search, setSearch})=> {
   return(
 <div className='navbar'>
   <a href = '/' class = 'logo'>
-    <img src='src/assets/bullbear.png'></img>
+    <img src={Logo}></img>
   </a>
  
   <div className = 'searchbar'>
