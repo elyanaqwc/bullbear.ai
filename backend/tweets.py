@@ -56,8 +56,8 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",
     "localhost:5173",
-    "https://bullbear-g7x71tgo0-elyanas-projects.vercel.app/",
-    "bullbear-g7x71tgo0-elyanas-projects.vercel.app/"
+    "https://bullbear-fgbpuxvb0-elyanas-projects.vercel.app/",
+    "bullbear-fgbpuxvb0-elyanas-projects.vercel.app/"
 ]
 
 app.add_middleware(
