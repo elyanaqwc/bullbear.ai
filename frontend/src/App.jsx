@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from './assets/bullbear.png';
+import MobileLogo from './assets/bullbearmain.png';
 import { fetchTweets } from './api'; 
 import './index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,11 +18,28 @@ const Footer = (()=>{
   )
 })
 const NavBar = (({search, setSearch})=> {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Effect to track window size changes
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 480); // If width is less than or equal to 768px, consider it mobile
+    };
+
+    // Initial check on page load
+    checkMobile();
+
+    // Event listener for resizing window
+    window.addEventListener('resize', checkMobile);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   console.log(search);
   return(
 <div className='navbar'>
   <a href = '/' class = 'logo'>
-    <img src={Logo}></img>
+    <img src={isMobile ? MobileLogo : Logo}></img>
   </a>
  
   <div className = 'searchbar'>

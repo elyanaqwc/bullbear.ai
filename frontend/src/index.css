@@ -63,7 +63,23 @@ img{
 }
 
 
+@media only screen and (max-width: 480px) {
+  .navbar{
+    justify-content: center !important;
 
+  }
+
+  .searchbar{width: 170px;
+  }
+  .search{width: 60px}
+
+  .navbar .logo img {
+    width: 60px;
+    height: 60px;
+    padding-right: 10px;
+  }
+  
+}
 
 @media only screen and (max-width: 768px) {
 
