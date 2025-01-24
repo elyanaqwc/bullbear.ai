@@ -63,11 +63,7 @@ img{
 }
 
 
-@media only screen and (max-width: 480px) {
-  .navbar{
-    justify-content: center !important;
-  }
-}
+
 
 @media only screen and (max-width: 768px) {
 
@@ -76,7 +72,7 @@ img{
   }
 
 .box{
-  width: auto !important;
+  width: 80% !important;
 }
 }
 
