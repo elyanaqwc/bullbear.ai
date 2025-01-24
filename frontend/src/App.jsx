@@ -20,19 +20,15 @@ const Footer = (()=>{
 const NavBar = (({search, setSearch})=> {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Effect to track window size changes
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 480); // If width is less than or equal to 768px, consider it mobile
+      setIsMobile(window.innerWidth <= 480); 
     };
 
-    // Initial check on page load
     checkMobile();
 
-    // Event listener for resizing window
     window.addEventListener('resize', checkMobile);
 
-    // Cleanup listener on component unmount
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   console.log(search);
