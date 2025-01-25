@@ -5,6 +5,20 @@ import { fetchTweets } from './api';
 import './index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+
+
+const API_URL = 'https://bullbear-ai.onrender.com';  
+const interval = 30000; 
+
+const reloadWebsite = async () => {
+  try {
+    const response = await axios.get(API_URL);
+    console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
+  } catch (error) {
+    console.error(`Error reloading at ${new Date().toISOString()}:`, error.message);
+  }
+};
 
 
 const Footer = (()=>{
@@ -226,7 +240,12 @@ return (
 }
 
 function App() {
-  const [search, setSearch] = useState(''); // Lift search state here
+  useEffect(()=> {
+    const intervalId = setInterval(reloadWebsite, interval);
+
+    return () => clearInterval(intervalId);  
+  }, [])
+  const [search, setSearch] = useState(''); 
   return (
     <>
 <NavBar search={search} setSearch={setSearch} />
