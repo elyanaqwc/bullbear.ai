@@ -5,7 +5,7 @@ This project analyzes financial sentiment from tweets using a custom fine-tuned 
 ## Tech Stack
 
 - **Frontend**: React (deployed on [Vercel](https://bullbear-ai.vercel.app/))
-- **Backend**: FastAPI (hosted on [Render])
+- **Backend**: FastAPI (hosted on Render)
 - **Database**: MongoDB
 - **Tweet Retrieval**: JavaScript script using [Rettiwt API](https://github.com/Rishikant181/Rettiwt-API)
 - **Sentiment Analysis**: Python script using the fine-tuned [FinBERT](https://huggingface.co/elyanaquah/sentiment-analysis) model
@@ -14,8 +14,8 @@ This project analyzes financial sentiment from tweets using a custom fine-tuned 
 
 ## Features
 
-- **Tweet Retrieval**: The backend fetches tweets in real-time using the Rettiwt API.
+- **Tweet Retrieval**: The backend fetches tweets using the Rettiwt API.
 - **Sentiment Analysis**: The collected tweets are analyzed for financial sentiment using a fine-tuned FinBERT model.
 - **Stock Ticker Extraction**: Extracts stock tickers from the tweets using the Gemini API for analysis.
-- **Data Storage**: All collected tweets and sentiment data are stored in MongoDB for further analysis.
+- **Data Storage**: All collected tweets and sentiment data are stored in MongoDB.
 - **Frontend**: A responsive React app to visualize sentiment trends, stock tickers, and tweet data.
